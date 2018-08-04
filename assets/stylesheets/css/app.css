@@ -9,6 +9,26 @@ body {
   font-size: 14px;
 }
 
+h1, h2 {
+  width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 2;
+}
+
 header {
   padding: 40px;
   margin: 0px;
@@ -21,7 +41,7 @@ header .menu {
 }
 
 footer {
-  background-color: #2A211D;
+  background-color: #000000;
   color: #FEFEFE;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -60,6 +80,17 @@ footer {
   height: 60px;
   width: 100px;
   background: #FEFEFE;
+  border-radius: 9px 9px 9px 9px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  -webkit-box-shadow: 0px 3px 9px -1px #1f99ce;
+  -moz-box-shadow: 0px 3px 9px -1px #1f99ce;
+  box-shadow: 0px 3px 9px -1px #1f99ce;
+}
+
+.flex-end {
+  align-items: flex-end;
+  flex-direction: column;
 }
 
 #menu {
@@ -95,7 +126,7 @@ footer {
 }
 
 .column {
-  width: 100%;
+  flex: 4 0 0;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
@@ -107,7 +138,7 @@ footer {
 }
 
 .column-2 {
-  width: 50%;
+  flex: 2 0 0;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
@@ -119,7 +150,7 @@ footer {
 }
 
 .column-4 {
-  width: 25%;
+  flex: 1 0 0;
   margin: 0 auto;
   padding: 0;
   display: -webkit-box;
@@ -158,29 +189,28 @@ footer {
   line-height: 1.8;
 }
 
-h1, h2 {
-  width: 100%;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 18px;
-}
-
-h3 {
-  text-transform: uppercase;
-}
-
 .blue-part {
   background-color: #2cb0fc;
   color: #FEFEFE;
 }
 
+.white-part {
+  min-height: 400px;
+}
+
+.grey-part {
+  background-color: #f7f7f7;
+  color: #2A211D;
+  min-height: 500px;
+}
+
 .icons-part {
-  padding: 40px 100px;
+  padding: 0px;
+}
+
+.hidden {
+  position: relative;
+  overflow: hidden;
 }
 
 .phone {
@@ -189,6 +219,14 @@ h3 {
   width: 410px;
   height: 730px;
   background-size: 410px;
+}
+
+.image-travel {
+  position: absolute;
+  background-image: url("../../images/travel.jpg");
+  width: 50%;
+  height: 100%;
+  background-size: cover;
 }
 
 .buttons {
@@ -201,6 +239,9 @@ h3 {
 .button {
   border: 2px solid #FEFEFE;
   padding: 10px;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
   min-width: 150px;
 }
 .button .icon {
