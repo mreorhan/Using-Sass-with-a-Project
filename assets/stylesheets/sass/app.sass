@@ -1,0 +1,196 @@
+// Created by mrecoder
+//====================
+
+//Imports
+@import "_variables"
+@import "_mixins"
+@import url('https://fonts.googleapis.com/css?family=#{$fontFamily}:#{$fontWeights}&subset=latin-ext')
+
+
+//Variables
+$black: #2A211D
+$white: #FEFEFE
+$pale: #d2e1dd
+$pink: #cc6699
+$main-blue: #2cb0fc
+
+$font-stack:'Montserrat', sans-serif
+$font-bold:bold
+$font-size-xs: 11px
+$font-size-s: 14px
+$font-size-m: 16px
+$font-size-l: 18px
+$font-size-xl: 30px
+$font-spot: 30px
+$col-2:50%
+$col-4:25%
+
+$padding-s:10px
+$padding-m:20px
+$padding-l:40px
+$percent: "%"
+
+//Mixins
+
+=box($margin,$padding,$bgcolor,$color)
+    padding:             $padding+px
+    margin:              $margin+px
+    background-color:    $bgcolor
+    color:               $color
+    margin:              0 auto
+    
+=reset
+    margin:     0
+    padding:    0
+    list-style-type: none
+
+=flex
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    justify-content: space-between
+
+=column($size)
+    width: #{(100/$size)+$percent}
+    margin: 0 auto
+    padding: 0
+    +flex
+
+=button($color,$padding)
+    border: 2px solid $color
+    padding: $padding+$measureType
+//styles
+
+body
+    +reset
+    background: $white
+    color: $black
+    font-family: $font-stack
+    font-size:$font-size-s
+
+header
+    +box(0,40,$main-blue,$black)
+    //+boxShadow(5,5,5,5,#0053cf)
+    .menu
+        font-weight: $font-bold
+    
+footer
+    background-color: $black
+    color: $white
+    padding-top: $padding-m
+    padding-bottom: $padding-m
+
+.container 
+    margin: 0 auto
+    +flex
+    @media only screen and (min-width:1440px)
+        width: 1300px
+    
+#map
+    width: 600px
+    height: 250px
+
+#logo,#menu
+    +flex
+
+#logo
+    height: 60px
+    width: 100px
+    background: $white
+    
+
+#menu
+    text-align: right
+    line-height: 56px
+
+    ul
+        +reset
+
+        li
+            opacity: 0.6
+            list-style-type: none
+            display: inline-flex
+            +animation(unquote("all"),0.3,unquote("ease"))
+            a  
+                color:$white
+                text-decoration: none
+                font-weight: $font-bold
+                padding: 0 20px
+
+        li:hover 
+            opacity: 1
+.text-center
+    text-align: center
+.column
+    +column(1)
+.column-2
+    +column(2)
+.column-4
+    +column(4)
+.icon-large
+    font-size: 120px
+.main-area
+    padding: 100px 70px
+.wrap
+    flex-wrap: wrap
+.full-width *
+    width: 100%
+.main-icons
+    div
+        span   
+            color:$main-blue
+.spot
+
+    .column-2
+        flex-wrap: wrap
+
+    .spot-text
+        font-size: $font-spot
+        line-height: 1.8
+h1,h2  
+    width: 100%
+h1  
+    font-size: $font-size-xl
+h2  
+    font-size: $font-size-l
+h3 
+    text-transform: uppercase
+.section
+
+.blue-part
+    background-color: $main-blue 
+    color:$white
+
+.icons-part
+    padding: 40px 100px
+.phone
+    position: absolute
+    background-image: url('../../images/main.png')
+    width: 410px
+    height: 730px
+    background-size: 410px
+
+
+.buttons
+    display: flex
+    .button
+        margin: 10px 10px 10px 0
+.button
+    +button($white,10)
+    min-width: 150px
+
+    .icon
+        display: inline-block
+        float: left
+        font-size: 30px
+        padding: 1px 10px 0 0
+
+    .text1
+        font-size: $font-size-xs
+        text-transform: uppercase
+
+    .text2
+        font-size: $font-size-s
+        

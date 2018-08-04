@@ -1,0 +1,13 @@
+sass --watch sass/app.sass:css/app.css --style compressed
+
+sass --watch sass:css dediðimizde sass içindeki tüm sasslarý css dosyasýna atar. bunu engellemek için ayrý dosya oluþmasýný istemediðimiz sass dosyalarýný _ ile belirtmemiz gerekir.
+ÖR:
+sass/_modules.sass
+sass/_widgets.sass
+bu dosyalar ayrý ayrý çýkmak yerine tek dosya haline app dosyasýna çýkar. Buna partials denir.
+
+modüllerin cssleri ayrý olsun.
+onlarý ana app dosyasýnda import edince otomatik birleþip compile oluyor.
+@import "anothersassfile"
+
+variable.sass dosyasý oluþtur ve global deðiþkenleri burada tanýmla. ana sass dosyasýnda 1 kez bunu import ettiðinde diðer ana sass dosyasý ile çaðrýlan sass dosyalarýnda da kullanýlabilir hale gelir. ana sass dosyasýna bunu en baþa yazmalýyýz

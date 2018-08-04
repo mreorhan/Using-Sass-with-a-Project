@@ -1,0 +1,18 @@
+//GLOBAL MIXINS
+
+
+=boxShadow($top,$right,$bottom,$left,$color)
+    -webkit-box-shadow: $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType $color
+    -moz-box-shadow:    $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType $color
+    box-shadow:         $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType $color
+
+=borderRadius($top,$right,$bottom,$left)
+    border-radius:          $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType
+    -moz-border-radius:     $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType
+    -webkit-border-radius:  $top+$measureType $right+$measureType $bottom+$measureType $left+$measureType
+
+=animation($animationType,$time,$animation)
+    -webkit-transition: $animationType $time+#{"s"} $animation
+    -moz-transition:    $animationType $time+#{"s"} $animation
+    -o-transition:      $animationType $time+#{"s"} $animation
+    transition:         $animationType $time+#{"s"} $animation
